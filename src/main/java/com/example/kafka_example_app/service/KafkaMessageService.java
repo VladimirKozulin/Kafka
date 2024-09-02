@@ -16,7 +16,7 @@ public class KafkaMessageService {
         kafkaMessages.add(kafkaMessage);
     }
 
-    public Optional<KafkaMessage> findById(Long id){
+    public Optional<KafkaMessage> getById(Long id){
         return kafkaMessages.stream()
                 .filter(it -> it.getId().equals(id)).findFirst();
     }
